@@ -1,0 +1,427 @@
+$dark-blue: #0d253f
+$light-blue: #01b4e4
+$light-green: #90cea1
+    
+*
+    box-sizing: border-box
+
+body
+    margin: 0
+    padding: 0
+    font-family: sans-serif
+h3
+    padding: 0
+    margin: 0 20px 0 0
+    font-size: 24px
+button
+    border-radius: 20px
+    border: none
+    background-color: transparentize(white, 1)
+    font-size: 16px
+    padding: 6px 20px
+
+.menu-items
+    li
+        list-style-type: none
+    a
+        text-decoration: none
+        color: white
+.action_button
+    background-color: $dark-blue
+    color: $light-blue
+.action_button_light
+    background-color: $light-blue
+    color: $dark-blue
+.container_buttons
+    border: $dark-blue solid 1px
+    border-radius: 20px
+
+.card
+    width: 150px
+    height: 225px
+    background-color: #f1f1f1
+    border: none
+    border-radius: 10px
+.cyrcle
+    position: relative
+    left: 10px
+    bottom: 42px
+    width: 34px
+    height: 34px
+    background-color: $dark-blue
+    border: none
+    border-radius: 50px
+    &__ring
+        position: relative
+        left: 2px
+        top: 2px
+        width: 30px
+        height: 30px
+        border: none
+        border-radius: 50px
+        &__inner_cyrcle
+            position: relative
+            left: 3px
+            top: 3px
+            width: 24px
+            height: 24px
+            border-radius: 50px
+            background-color: $dark-blue
+.green_line 
+    height: 100%
+    background: linear-gradient(to right, rgba(192, 254, 207, 1) 0%, rgba(192, 254, 207, 1) 100%)
+.red_line 
+    height: 100%
+    background: linear-gradient(to right, rgba(253, 193, 112, 1) 0%, rgba(253, 193, 112, 1) 100%)
+
+.element
+    margin-right: 20px
+.content
+    position: relative
+    width: 150px
+    height: 86px
+    padding: 0 10px 0
+    bottom: 30px
+    p
+        font-size: 16px
+        padding: 0
+        margin: 0
+        span
+            font-weight: 700
+
+.pop_menu 
+    position: absolute
+    width: 200px
+    padding: 20px 0 20px 5px
+    background: white
+    border: none
+    border-radius: 10px
+    top: 40px
+    ul
+        list-style-type: none
+    ul li
+        margin: 10px 0
+    ul li a
+        color: black
+
+/*.player
+    width: 1000px
+    height: 1000px
+    position: fixed
+    top: 0
+    background: black
+    z-index: 100
+    &__close
+        position: relative
+        color: white
+        left: 95%
+        top: 5%*/
+
+.header
+    background-color: $dark-blue
+    position: sticky
+    top: 0
+    z-index: 10
+    &__contants
+        width: 1300px
+        display: flex
+        justify-content: space-between
+        margin: 0 auto
+        &__menu
+            display: flex
+            &__logo
+                width: 154px
+                height: 20px
+                margin: 15px 0 0 15px
+            &__items
+                display: flex
+                li
+                    margin-right: 10px
+                li:last-child
+                    margin-right: 0
+        &__settings
+            &__items
+                display: flex
+                li
+                    margin-right: 10px
+                    #plus
+                        font-weight: 900
+                    #language
+                        border: white solid 1px
+                        border-radius: 5px
+                        padding: 3px 1px
+                    #magnifier
+                        font-size: 15px
+                li:last-child
+                    margin-right: 0
+
+.box-contants
+    .baner
+        width: 1300px
+        height: 360px
+        margin: 0 auto
+        padding: 30px 40px
+        background-image: linear-gradient(to right, rgba($dark-blue, 0.8) 0%, rgba($dark-blue, 0) 100%), url('../../img/bWelcome.jpg')
+        background-size: cover
+        background-repeat: no-repeat
+        color: white
+        display: flex
+        flex-direction: column
+        justify-content: center
+        &__title
+            padding: 0
+            margin: 0
+            font-size: 48px
+        &__text
+            padding: 0
+            margin: 0 0 40px 0
+            font-size: 32px
+        &__container
+            &__input
+                width: 1100px
+                height: 46px
+                border-radius: 20px
+                border: none
+                font-size: 20px
+                padding-left: 20px
+            &__button
+                position: relative
+                width: 100px
+                height: 46px
+                right: 40px
+                bottom: 2px
+                border-radius: 20px
+                border: none
+                background-color: $light-blue
+                color: white
+
+    .trends 
+        width: 1300px
+        height: 440px
+        margin: 0 auto
+        background-image: url("../../img/lines.svg")
+        background-repeat: no-repeat
+        background-position: 50% 200px
+        padding: 30px 0 0 40px
+        &__buttons
+            display: flex
+            &__container
+                width: 265px
+                height: 30px
+        &__cards
+            display: flex
+            justify-content: space-between
+            width: auto
+            height: 379px
+            padding: 20px 0
+            overflow-y: hidden
+            overflow-x: scroll
+
+    .treylers
+        width: 1300px
+        height: 380px
+        margin: 0 auto
+        background-image: url("../../img/bTrelers.jpg")
+        background-repeat: no-repeat
+        color: white
+        &__bacground
+            width: 1300px
+            background-image: linear-gradient(to right, rgba($dark-blue, 0.75) 0%, rgba($dark-blue, 0.75) 100%)
+        &__buttons
+            padding: 30px 0 20px 40px
+            display: flex
+            &__container
+                border: $light-blue solid 1px
+            button
+                color: white
+        &__cards
+            height: 300px
+            padding: 20px 0
+            display: flex
+            overflow-y: hidden
+            overflow-x: scroll
+            .item_card
+                margin: 0 0 20px 40px
+                text-align: center
+                h5
+                    padding: 0
+                    margin: 0
+                p
+                    padding: 0
+                    margin: 0
+
+    .popular
+        width: 1300px
+        height: 450px
+        margin: 0 auto
+        &__buttons
+            padding: 30px 0 5px 40px
+            display: flex
+        &__cards
+            display: flex
+            justify-content: space-between
+            width: auto
+            height: 379px
+            padding: 10px 0
+            overflow-y: hidden
+            overflow-x: scroll
+
+    .free
+        width: 1300px
+        height: 450px
+        margin: 0 auto
+        &__buttons
+            padding: 30px 0 20px 40px
+            display: flex
+        &__cards
+            display: flex
+            justify-content: space-between
+            width: auto
+            height: 379px
+            padding: 10px 0
+            overflow-y: hidden
+            overflow-x: scroll
+
+    .invitation
+        width: 1300px
+        height: 300px
+        margin: 0 auto
+        padding: 30px 40px
+        background-image: url(../../img/invite.jpg)
+        background-position: center center
+        background-size: cover
+        background-repeat: no-repeat
+        color: white
+        &__title
+            margin: 0
+            font-size: 32px
+        &__content
+            display: flex
+            &__text
+                font-size: 20px
+                width: 60%
+            &__list
+                font-size: 16px
+        &__button
+            color: white
+            background-color: $light-blue
+            border-radius: 5px
+            padding: 8px 16px
+
+    .board
+        width: 1300px
+        height: 475px
+        margin: 0 auto
+        padding: 30px 40px
+        &__head
+            display: flex
+            margin-bottom: 50px
+        &__rules
+            &__green
+                display: flex
+                &__dot
+                    width: 12px
+                    height: 12px
+                    background: linear-gradient(to right, rgba(192, 254, 207, 1) 0%, rgba(192, 254, 207, 1) 100%)
+                    margin-right: 10px
+                    border: none
+                    border-radius: 50px
+                p
+                    margin: 0
+                    padding: 0
+                    font-size: 12px
+            &__red
+                display: flex
+                &__dot
+                    width: 12px
+                    height: 12px
+                    background: linear-gradient(to right, rgba(253, 193, 112, 1) 0%, rgba(253, 193, 112, 1) 100%)
+                    margin-right: 10px
+                    border: none
+                    border-radius: 50px
+                p
+                    margin: 0
+                    padding: 0
+                    font-size: 12px
+        &__users
+            display: flex
+            &__left
+                width: 40%
+                padding-right: 50%
+                &__slot
+                    display: flex
+                    padding-bottom: 10px
+            &__right
+                width: 40%
+                &__slot
+                    display: flex
+                    padding-bottom: 10px
+        &__img
+            margin: 0 10px 0 0
+            padding: 0
+            width: 56px
+            height: 56px
+            border: none
+            border-radius: 50px
+        span
+            padding: 22px
+            color: white
+        h5
+            margin: 0
+            padding: 0
+            font-size: 19px 
+        &__static__green
+            margin: 0
+            padding: 0
+            display: flex
+            &__line
+                margin: 0
+                padding: 0
+            p
+                margin: 0
+                padding: 0
+                font-size: 14px 
+        &__static__red
+            margin: 0
+            padding: 0
+            display: flex
+            &__line
+                margin: 0
+                padding: 0
+            p
+                margin: 0
+                padding: 0
+                font-size: 14px 
+
+.footer
+    background-color: $dark-blue
+    color: white
+    padding: 40px 0 80px 0
+    &__contants
+        width: 1300px
+        display: flex
+        justify-content: space-between
+        margin: 0 auto
+        &__enter
+            &__logo
+                width: 130px
+                height: 94px
+                display: block
+                margin: 0 0 40px 150px
+            &__button
+                font-size: 18px
+                font-weight: 700
+                color: $light-blue
+                padding: 10px 15px
+                border-radius: 10px
+                border: none
+                background-color: white
+        &__list
+            h3
+                margin-bottom: 5px
+            ul
+                padding: 0
+                margin: 0
+                li
+                    margin: 0 0 5px 0
+                

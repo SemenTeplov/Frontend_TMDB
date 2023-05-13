@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="src/css/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <title>The Movie Database (TMDB)</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <section class="header">
+                <div class="header__contants">
+                    <div class="header__contants__menu">
+                        <img src="img/blue_logo.svg" alt="icon" class="header__contants__menu__logo">
+                        <ul class="menu-items header__contants__menu__items">
+                            <li>
+                                <a id="item1" href="#">Фильмы</a>
+                                <div id="menu1" class="pop_menu" style="display: none;">
+                                    <ul>
+                                        <li><a href="#">Популярные</a></li>
+                                        <li><a href="#">Смотрят сейчас</a></li>
+                                        <li><a href="#">Ожидаемые</a></li>
+                                        <li><a href="#">Лучшие</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a id="item2" href="#">Сериалы</a>
+                                <div id="menu2" class="pop_menu" style="display: none;">
+                                    <ul>
+                                        <li><a href="#">Популярные</a></li>
+                                        <li><a href="#">В эфире сегодня</a></li>
+                                        <li><a href="#">По телевидению</a></li>
+                                        <li><a href="#">Лучшие</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a id="item3" href="#">Люди</a>
+                                <div id="menu3" class="pop_menu" style="display: none;">
+                                    <ul>
+                                        <li><a href="#">Популярные люди</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a id="item4" href="#">Ещё</a>
+                                <div id="menu4" class="pop_menu" style="display: none;">
+                                    <ul>
+                                        <li><a href="#">Обсуждения</a></li>
+                                        <li><a href="#">Доска почета</a></li>
+                                        <li><a href="#">Поддержка</a></li>
+                                        <li><a href="#">API</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="header__contants__settings">
+                        <ul class="header__contants__settings__items menu-items">
+                            <li><a id="plus" href="#">+</a></li>
+                            <li><a id="language" href="#">RU</a></li>
+                            <li><a href="#">Войти</a></li>
+                            <li><a href="#">Присоединиться к TMDB</a></li>
+                            <li><a id="magnifier" href="#">&#128269</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <div class="box-contants">
+                <section class="baner">
+                    <h1 class="baner__title">Добро пожаловать.</h1>
+                    <p class="baner__text">Миллионы фильмов, сериалов и людей. Исследуйте сейчас.</p>
+                    <div class="baner__container">
+                        <input type="text" class="baner__container__input" placeholder="Найти фильм, сериал, персону......">
+                        <button class="baner__container__button">Search</button>
+                    </div>
+                </section>
+
+                <section class="trends">
+                    <div class="trends__buttons">
+                        <h3>В тренде</h3>
+                        <div class="trends__buttons__container container_buttons">
+                            <button class="action_button">Сегодня</button>
+                            <button>На этой неделе</button>
+                        </div>
+                    </div>
+                    <div class="trends__cards"></div>
+                </section>
+
+                <section class="treylers">
+                    <div class="treylers__bacground">
+                        <div class="treylers__buttons">
+                            <h3>Последние трейлеры</h3>
+                            <div class="container_buttons treylers__buttons__container">
+                                <button class="action_button_light">Онлайн</button>
+                                <button>По ТВ</button>
+                                <button>Напрокат</button>
+                                <button>В кинотеатрах</button>
+                            </div>
+                        </div>
+                        <div class="treylers__cards">
+                            <div class="item_card">
+                                <video width="300" height="170" src=""></video>
+                                <h5 style="color: white; padding: 5px 0 0 4px">загаловок</h5>
+                                <p>текст</p>
+                            </div>
+                            <div class="item_card">
+                                <video width="300" height="170" src=""></video>
+                                <h5 style="color: white; padding: 5px 0 0 4px">загаловок</h5>
+                                <p>текст</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="popular">
+                    <div class="popular__buttons">
+                        <h3>Что популярно</h3>
+                        <div class="container_buttons popular__buttons__container">
+                            <button class="action_button">Онлайн</button>
+                            <button>По ТВ</button>
+                            <button>Напрокат</button>
+                            <button>В кинотеатрах</button>
+                        </div>
+                    </div>
+                    <div class="popular__cards"></div>
+                </section>
+
+                <section class="free">
+                    <div class="free__buttons">
+                        <h3>Бесплатное</h3>
+                        <div class="container_buttons free__buttons__container">
+                            <button class="action_button">Фильмы</button>
+                            <button>Сериалы</button>
+                        </div>
+                    </div>
+                    <div class="free__cards"></div>
+                </section>
+
+                <section class="invitation">
+                    <h2 class="invitation__title">Присоединяйтесь сегодня</h2>
+                    <div class="invitation__content">
+                        <p class="invitation__content__text">Get access to maintain your own custom personal lists, track what you've seen and search and filter for what to watch next—regardless if it's in theatres, on TV or available on popular streaming services like Netflix, Amazon Prime Video, Disney Plus, Canal+, and OCS Go.</p>
+                        <ul class="invitation__content__list">
+                            <li>Enjoy TMDB ad free</li>
+                            <li>Maintain a personal watchlist</li>
+                            <li>Filter by your subscribed streaming services and find something to watch</li>
+                            <li>Log the movies and TV shows you've seen</li>
+                            <li>Build custom lists</li>
+                            <li>Contribute to and improve our database</li>
+                        </ul>
+                    </div>
+                    <button class="invitation__button">Зарегистрироваться</button>
+                </section>
+
+                <section class="board">
+                    <div class="board__head">
+                        <h3 class="board__title">Доска почёта</h3>
+                    <div class="board__rules">
+                        <div class="board__rules__green">
+                            <div class="board__rules__green__dot"></div>
+                            <p>Правки за всё время</p>
+                        </div>
+                        <div class="board__rules__red">
+                            <div class="board__rules__red__dot"></div>
+                            <p>Правки за неделю</p>
+                        </div>
+                    </div>
+                    </div>
+        
+                    <div class="board__users">
+                        <div class="board__users__left">
+                            <div class="board__users__left__slot">
+                                <img src="https://www.gravatar.com/avatar/3af6511cf44a709e6ae5b612903c846c.jpg?s=64" alt="logo" class="board__img">
+                                <div class="board__static">
+                                    <h5>heli5m</h5>
+                                    <div class="board__static__green">
+                                        <div class="board__static__green__line"></div>
+                                        <div class="green_line" style="width: 0"><p>654,585</p></div>
+                                    </div>
+                                    <div class="board__static__red">
+                                        <div class="board__static__red__line"></div>
+                                        <div class="red_line" style="width: 0"><p>24,358</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="board__users__left__slot">
+                                <img src="https://www.themoviedb.org/t/p/w64_and_h64_face/5BvxGhRE7yjtbHCXgrTxPk9hBXp.jpg
+                                " alt="logo" class="board__img">
+                                <div class="board__static">
+                                    <h5>Sheigutn</h5>
+                                    <div class="board__static__green">
+                                        <div class="board__static__green__line"></div>
+                                        <div class="green_line"><p>450,753</p></div>
+                                    </div>
+                                    <div class="board__static__red">
+                                        <div class="board__static__red__line"></div>
+                                        <div class="red_line" style="width: 0"><p>4,836</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="board__users__left__slot">
+                                <span style="background-color: #01C6AC;" class="board__img">Q</span>
+                                <div class="board__static">
+                                    <h5>qualitylover</h5>
+                                    <div class="board__static__green">
+                                        <div class="board__static__green__line"></div>
+                                        <div class="green_line"><p>344,136</p></div>
+                                    </div>
+                                    <div class="board__static__red">
+                                        <div class="board__static__red__line"></div>
+                                        <div class="red_line" style="width: 0"><p>4,673</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="board__users__left__slot">
+                                <span style="background-color: #0177D2;" class="board__img">P</span>
+                                <div class="board__static">
+                                    <h5>pinqu51</h5>
+                                    <div class="board__static__green">
+                                        <div class="board__static__green__line"></div>
+                                        <div class="green_line"><p>464,455</p></div>
+                                    </div>
+                                    <div class="board__static__red">
+                                        <div class="board__static__red__line"></div>
+                                        <div class="red_line" style="width: 0"><p>3,709</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="board__users__left__slot">
+                                <img src="https://www.themoviedb.org/t/p/w64_and_h64_face/yYG7Rhn9HfFpssIMeNiDynvxC14.jpg" alt="logo" class="board__img">
+                                <div class="board__static">
+                                    <h5>raze464</h5>
+                                    <div class="board__static__green">
+                                        <div class="board__static__green__line"></div>
+                                        <div class="green_line"><p>533,088</p></div>
+                                    </div>
+                                    <div class="board__static__red">
+                                        <div class="board__static__red__line"></div>
+                                        <div class="red_line" style="width: 0"><p>3,274</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="board__users__right">
+                            <div class="board__users__right__slot">
+                                <span style="background-color: #01C6AC;" class="board__img">H</span>
+                                <div class="board__static">
+                                    <h5>hugeservis</h5>
+                                    <div class="board__static__green">
+                                        <div class="board__static__green__line"></div>
+                                        <div class="green_line"><p>77,510</p></div>
+                                    </div>
+                                    <div class="board__static__red">
+                                        <div class="board__static__red__line"></div>
+                                        <div class="red_line" style="width: 0"><p>5,215</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="board__users__right__slot">
+                                <span style="background-color: #D29001;" class="board__img">R</span>
+                                <div class="board__static">
+                                    <h5>RuiZafon</h5>
+                                    <div class="board__static__green">
+                                        <div class="board__static__green__line"></div>
+                                        <div class="green_line"><p>380,166</p></div>
+                                    </div>
+                                    <div class="board__static__red">
+                                        <div class="board__static__red__line"></div>
+                                        <div class="red_line" style="width: 0"><p>4,760</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="board__users__right__slot">
+                                <img src="https://www.gravatar.com/avatar/56d68045d7bd3b3ddfcc29d9103e844a.jpg?s=64" alt="logo" class="board__img">
+                                <div class="board__static">
+                                    <h5>mea6an</h5>
+                                    <div class="board__static__green">
+                                        <div class="board__static__green__line"></div>
+                                        <div class="green_line"><p>34,431</p></div>
+                                    </div>
+                                    <div class="board__static__red">
+                                        <div class="board__static__red__line"></div>
+                                        <div class="red_line" style="width: 0"><p>4,358</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="board__users__right__slot">
+                                <img src="https://www.gravatar.com/avatar/00a9ed202818e8fb860711dde04047e3.jpg?s=64" alt="logo" class="board__img">
+                                <div class="board__static">
+                                    <h5>wael12345</h5>
+                                    <div class="board__static__green">
+                                        <div class="board__static__green__line"></div>
+                                        <div class="green_line"><p>31,963</p></div>
+                                    </div>
+                                    <div class="board__static__red">
+                                        <div class="board__static__red__line"></div>
+                                        <div class="red_line" style="width: 0"><p>3,420</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="board__users__right__slot">
+                                <span style="background-color: #0177D2;" class="board__img">S</span>
+                                <div class="board__static">
+                                    <h5>sues2blame</h5>
+                                    <div class="board__static__green">
+                                        <div class="board__static__green__line"></div>
+                                        <div class="green_line"><p>38,026</p></div>
+                                    </div>
+                                    <div class="board__static__red">
+                                        <div class="board__static__red__line"></div>
+                                        <div class="red_line" style="width: 0"><p>2,951</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <section class="footer">
+                <div class="footer__contants">
+                    <div class="footer__contants__enter">
+                        <img src="img/blue_multy_line_logo.svg" alt="icon" class="footer__contants__enter__logo">
+                        <button class="footer__contants__enter__button">ВСТУПИТЬ В СООБЩЕСТВО</button>
+                    </div>
+
+                    <div class="footer__contants__list">
+                        <h3>ГЛАВНОЕ</h3>
+                        <ul class="menu-items">
+                            <li><a href="#">О TMDB</a></li>
+                            <li><a href="#">Связаться с нами</a></li>
+                            <li><a href="#">Форумы поддержки</a></li>
+                            <li><a href="#">API</a></li>
+                            <li><a href="#">Статус системы</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__contants__list">
+                        <h3>УЧАСТВУЙТЕ</h3>
+                        <ul class="menu-items">
+                            <li><a href="#">Библия редакторов</a></li>
+                            <li><a href="#">Добавить новый фильм</a></li>
+                            <li><a href="#">Добавить новый сериал</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__contants__list">
+                        <h3>СООБЩЕСТВО</h3>
+                        <ul class="menu-items">
+                            <li><a href="#">Руководства</a></li>
+                            <li><a href="#">Обсуждения</a></li>
+                            <li><a href="#">Доска почёта</a></li>
+                            <li><a href="#">Twitter</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__contants__list">
+                        <h3>О ПРАВЕ</h3>
+                        <ul class="menu-items">
+                            <li><a href="#">Условия использования</a></li>
+                            <li><a href="#">API Правила использования</a></li>
+                            <li><a href="#">Политика конфиденциальности</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <script src="js/script.js"></script>
+    </body>
+</html>
